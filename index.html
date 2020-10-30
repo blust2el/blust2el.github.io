@@ -2,7 +2,7 @@
 <html>
     <head>
 
-        <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
 
 
         <style type="text/css">
@@ -96,7 +96,7 @@
             }
         </style>
         
-        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+        <script src="lodash.min.js"></script>
 
         <script>
             // 1 = EMF level 5
@@ -202,7 +202,12 @@
                         return "error";
                 }
             }
-        </script>
+	function clearme(){
+	for (var i = 0; i < evidenceArray.length; i++){
+                    document.getElementById(getEvidenceByID(evidenceArray[i])).style.backgroundImage = "url('btnsChecked/" + getEvidenceByID(evidenceArray[i]) + ".png')";
+       
+	 }
+	</script>
 
     </head>
 
@@ -216,6 +221,8 @@
                 <div class="button" id="ghostorbs" onClick="toggleEvidence(4)"></div>
                 <div class="button" id="ghostwritings" onClick="toggleEvidence(5)"></div>
                 <div class="button" id="freezingtemperatures" onClick="toggleEvidence(6)"></div>
+		<div class="button" id="Clear" onClick="clearme()"></div>
+
             </div>
             <div id="ghosts">
                 <h1>Possible Ghosts</h1>
