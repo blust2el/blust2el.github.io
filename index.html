@@ -56,14 +56,14 @@
                 margin-bottom: 15px;
             }
 
-            #emf,#spiritbox,#fingerprints,#ghostorbs,#ghostwritings,#freezingtemperatures {
+        #emf,#spiritbox,#fingerprints,#ghostorbs,#ghostwritings,#freezingtemperatures,#clear {
                 width: 355px;
                 height: 38px;
                 background-repeat: no-repeat;
                 background-position: left;
             }
 
-            #emf:hover,#spiritbox:hover,#fingerprints:hover,#ghostorbs:hover,#ghostwritings:hover,#freezingtemperatures:hover {
+            #emf:hover,#spiritbox:hover,#fingerprints:hover,#ghostorbs:hover,#ghostwritings:hover,#freezingtemperatures:hover,#clear:hover {
                 cursor: pointer;
             }
 
@@ -90,6 +90,9 @@
             #freezingtemperatures {
                 background-image: url('btnsUnchecked/freezingtemperatures.png');
             }
+        #clear {
+            background-image: url('cls.png');
+        }
 
             .weakness {
                 color: rgb(0, 88, 0);
@@ -203,9 +206,13 @@
                 }
             }
 	function clearme(){
-	for (var i = 0; i < evidenceArray.length; i++){
-                    document.getElementById(getEvidenceByID(evidenceArray[i])).style.backgroundImage = "url('btnsChecked/" + getEvidenceByID(evidenceArray[i]) + ".png')";
-       
+	
+                    document.getElementById("emf").style.backgroundImage = "url('btnsUnchecked/emf.png')";
+                    document.getElementById("spiritbox").style.backgroundImage = "url('btnsUnchecked/spiritbox.png')";
+                    document.getElementById("fingerprints").style.backgroundImage = "url('btnsUnchecked/fingerprints.png')";
+                    document.getElementById("ghostorbs").style.backgroundImage = "url('btnsUnchecked/ghostorbs.png')";
+                    document.getElementById("ghostwritings").style.backgroundImage = "url('btnsUnchecked/ghostwritings.png')";
+                    document.getElementById("freezingtemperatures").style.backgroundImage = "url('btnsUnchecked/freezingtemperatures.png')";
 	 }
 	</script>
 
@@ -221,7 +228,7 @@
                 <div class="button" id="ghostorbs" onClick="toggleEvidence(4)"></div>
                 <div class="button" id="ghostwritings" onClick="toggleEvidence(5)"></div>
                 <div class="button" id="freezingtemperatures" onClick="toggleEvidence(6)"></div>
-		<div class="button" id="Clear" onClick="clearme()"></div>
+                <div class="button" id="clear" onClick="clearme()"></div>
 
             </div>
             <div id="ghosts">
